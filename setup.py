@@ -1,22 +1,36 @@
 from distutils.core import setup
+from os import path
+
+
+doc_dir = path.abspath(path.dirname(__file__))
+with open(path.join(doc_dir, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
-    name='djangoroku',         # How you named your package folder (MyLib)
+    name='djangoroku',        
     packages=['djangoroku'],   # Chose the same as "name"
     version='0.1',      # Start with a small number and increase it with every change you make
     # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     license='MIT',
-    # Give a short description about your library
+
+    
     description='A package that helps to deploy django application to heroku',
-    author='Stanley Ruheza',                   # Type in your name
-    author_email='2001stany@gmail.com',      # Type in your E-Mail
-    # Provide either the link to your github or to your website
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+
+    author='Stanley Ruheza',                 
+    author_email='2001stany@gmail.com',
+       
+    # link to your github 
     url='https://github.com/ioi2908/djangoroku',
-    # I explain this later on
+   
     download_url='https://github.com/ioi2908/djangoroku/archive/v_01.tar.gz',
-    # Keywords that define your package best
+    
     keywords=['django', 'heroku','deploy django', 'django heroku'],
-    install_requires=[            # I get to this in a second
+    install_requires=[            
         'coloredlogs',
+        'wheel',
+        'setuptools',
         
     ],
     classifiers=[
