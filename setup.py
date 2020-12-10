@@ -10,7 +10,7 @@ with open(path.join(doc_dir, 'README.md'), encoding='utf-8') as f:
 setup(
     name='djangoroku',        
     packages=['djangoroku'],   # Chose the same as "name"
-    version='0.1.0',      # Start with a small number and increase it with every change you make
+    version='0.1.1',      # Start with a small number and increase it with every change you make
     # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     license='MIT',
 
