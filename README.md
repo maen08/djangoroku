@@ -7,10 +7,10 @@ Djangoroku is the package that helps you to deploy a django application on Herok
 
 #### How?
 
-  - Configure the `settings.py` file for deployment
-  - Install all the necessary packages in your project
-  - Deploy the application while coding
-  - Configure the default database, `sqlite` in heroku 
+  - Configures the `settings.py` file for deployment
+  - Installs all the necessary packages in your project
+  - Deploys the application while coding
+  - Configures the default database, `sqlite` in heroku 
 
 ### Tech
 
