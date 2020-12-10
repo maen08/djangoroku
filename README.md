@@ -3,12 +3,14 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/ioi2908/djangoroku)
 
-Djangoroku is the package that helps to deploy django application to heroku without worry of creating files required or installing third-party packages. The tool will all do for you! 
+Djangoroku is the package that helps to deploy Django application on Heroku. 
 
-  - It setup the `settings.py` file for deployment
-  - It install all the necessary packages in your project
-  - Deploy the application while coding
-  - It setup the default database, `sqlite` in heroku 
+#### How
+
+  - Configures the `settings.py` file for deployment
+  - Installs all the necessary packages in your project
+  - Deploys the application while coding
+  - Configures the default database, `sqlite` on Heroku 
 
 ### Tech
 
@@ -27,17 +29,17 @@ $ echo "from djangoroku import *" > deploy.py
 $ python3 deploy.py
 ```
 
-The script will start running and do it for you. You'll only needed to provide:
+The script will start running and do everything for you. You'll only needed to provide:
  - Your project name
- - Choose the app name (which will be the heroku domain name)
- - Needed to be logged in your heroku account (emphasized)
+ - Choose the app name (which will be the Heroku domain name)
+ - Needed to be logged in your Heroku account (emphasized)
 
-Make sure your project runs with no errors in `localhost`, while developing. Note that, the package only helps to deploy and not debug your coding errors.
+Make sure your project runs with no errors on `localhost`, while developing. Note that, the package only helps you to deploy and not debug your coding errors.
 
 
 ### Todos
 
- - Display and interprete heroku logs for debugging during deployment.
+ - Display and interprete Heroku logs for debugging during deployment.
  - Setting up all types of databases.
  
 
