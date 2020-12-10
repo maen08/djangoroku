@@ -1,5 +1,6 @@
-from distutils.core import setup
+# from distutils.core import setup
 from os import path
+from setuptools import setup
 
 
 doc_dir = path.abspath(path.dirname(__file__))
@@ -26,7 +27,8 @@ setup(
    
     download_url='https://github.com/ioi2908/djangoroku/archive/v_01.tar.gz',
     
-    keywords=['django', 'heroku','deploy django', 'django heroku'],
+    keywords=['django', 'heroku', 'deploy django', 'django heroku'],
+    
     install_requires=[            
         'coloredlogs',
         'wheel',
