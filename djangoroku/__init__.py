@@ -1,0 +1,1 @@
+from djangoroku.djangoroku import DjangoHerokuDeploy
