@@ -1,7 +1,12 @@
 # Djangoroku
 
+[![Made in Tanzania](https://img.shields.io/badge/made%20in-tanzania-008751.svg?style=flat-square)](https://github.com/Tanzania-Developers-Community/made-in-tanzania)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/ioi2908/djangoroku)
+
+
+- [Djangoroku](https://github.com/maen08/djangoroku)  **By [@username](https://twitter.com/maentechie)**
+
 
 Djangoroku is the package that helps to deploy Django application on Heroku. 
 
