@@ -15,6 +15,18 @@ class DjangoHerokuDeploy():
     coloredlogs.install(level='DEBUG', logger=logger)
 
 
+
+
+#I: SELECTING OS
+
+    os_name = input('Which OS are you using?\n1.Lunux\n2.Windows')
+    
+
+    if os_name == '1':
+
+
+
+
 # I:THE DJANGO PART-SETTING UP EVERYTHING
 
 # ask the user to enter the project-name
