@@ -9,11 +9,6 @@ from djangoroku.djangoroku.linux import DeployOnLinux
 
 class DjangoHerokuDeploy():
 
-# pypi needs this instead of print statement
-
-    # logger = logging.getLogger(__name__)
-    # coloredlogs.install(level='DEBUG', logger=logger)
-
 
 #I: SELECTING OS
 
@@ -62,10 +57,6 @@ class DjangoHerokuDeploy():
             logger.debug('DONE: Procfile created')
 
 
-    # project_directory = os.getcwd()
-    # split_dirs = project_directory.split('/')
-    # project_folder = split_dirs[-1] 
-
         time.sleep(3)
 
     # a function to prepend the import statement
@@ -83,10 +74,6 @@ class DjangoHerokuDeploy():
 
         except FileExistsError:
             logger.debug('DONE: All packages are imported')
-
-
-
-
 
         time.sleep(3)
 

@@ -1,19 +1,21 @@
+"""
+CLI tool for Linux deploy on Heroku.
+"""
 
 
 class DeployOnLinux():
 
-# I:THE DJANGO PART-SETTING UP EVERYTHING
+    # I:THE DJANGO PART-SETTING UP EVERYTHING
 
-# ask the user to enter the project-name
     project_name = input('Whats your project name:')
-    
+
     try:
-        os.system('pip install gunicorn psycopg2-binary django-heroku dj-database-url')
+        os.system(
+            'pip install gunicorn psycopg2-binary django-heroku dj-database-url')
         logger.debug('DONE: All packages are installed successfully')
 
     except FileExistsError:
         logger.debug('DONE: All packages are installed successfully')
-
 
     time.sleep(4)
 
@@ -25,7 +27,6 @@ class DeployOnLinux():
     except FileExistsError:
         logger.debug('DONE: requirements.txt file created')
 
-
     time.sleep(4)
 
 # create a Procfile
@@ -35,14 +36,9 @@ class DeployOnLinux():
             f.write('web: gunicorn ' + project_name + '.wsgi:application')
         logger.debug('DONE: Procfile created')
 
-
     except FileExistsError:
         logger.debug('DONE: Procfile created')
 
-
-# project_directory = os.getcwd()
-# split_dirs = project_directory.split('/')
-# project_folder = split_dirs[-1] 
 
     time.sleep(3)
 
@@ -62,10 +58,6 @@ class DeployOnLinux():
     except FileExistsError:
         logger.debug('DONE: All packages are imported')
 
-
-
-
-
     time.sleep(3)
 
     logger.debug('Remember to push everything on Github')
@@ -75,17 +67,15 @@ class DeployOnLinux():
 
     try:
         logger.debug("INFO: Please login to heroku...")
-        # os.system('heroku login')
-    
+        
     except:
         logger.debug('INFO: Please login to heroku')
-
 
     time.sleep(2)
 
 # creating a heroku domain-name
     domain_name = input('Choose the app name: ')
-    os.system('heroku create' +' '+ domain_name)
+    os.system('heroku create' + ' ' + domain_name)
 
     reading_file = open('settings.py', 'r')
     new_file_content = ""
@@ -94,12 +84,14 @@ class DeployOnLinux():
     link = ALLOWED_HOSTS.split(' ')
 
     for line in reading_file:
-      stripped_line = line.strip()
-      new_line = stripped_line.replace(
-          'ALLOWED_HOSTS = []', f'ALLOWED_HOSTS = {link}')  # user should not rewrite ALLOWED_HOSTS
-                                                            # before the script. Let it handle everything
-      new_file_content += new_line + "\n"
+        stripped_line = line.strip()
+        new_line = stripped_line.replace(
+            'ALLOWED_HOSTS = []', f'ALLOWED_HOSTS = {link}') 
 
+        # user should not rewrite ALLOWED_HOSTS
+        # before the script. Let it handle everything
+        
+        new_file_content += new_line + "\n"
 
     reading_file.close()
     writing_file = open('settings.py', 'w')
