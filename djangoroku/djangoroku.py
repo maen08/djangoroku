@@ -7,14 +7,11 @@ import time
 from djangoroku.djangoroku.linux import DeployOnLinux
 
 
+
 class DjangoHerokuDeploy():
 
-
 #I: SELECTING OS
-
     os_name = input('Which OS are you using?\n1.Linux\n2.Windows')
-    
-
     if os_name == '1':
         DeployOnLinux()
 
@@ -23,16 +20,14 @@ class DjangoHerokuDeploy():
     # ask the user to enter the project-name
         project_name = input('Whats your project name:')
 
-    
         try:
             os.system('pip install gunicorn psycopg2-binary django-heroku dj-database-url')
             logger.debug('DONE: All packages are installed successfully')
 
         except FileExistsError:
             logger.debug('DONE: All packages are installed successfully')
-
-
         time.sleep(4)
+
 
     # create a requirements.txt file
         try:
@@ -41,8 +36,6 @@ class DjangoHerokuDeploy():
 
         except FileExistsError:
             logger.debug('DONE: requirements.txt file created')
-
-
         time.sleep(4)
 
     # create a Procfile
@@ -52,12 +45,10 @@ class DjangoHerokuDeploy():
                 f.write('web: gunicorn ' + project_name + '.wsgi:application')
             logger.debug('DONE: Procfile created')
 
-
         except FileExistsError:
             logger.debug('DONE: Procfile created')
-
-
         time.sleep(3)
+
 
     # a function to prepend the import statement
         to_settings = os.chdir(project_name)
@@ -76,7 +67,6 @@ class DjangoHerokuDeploy():
             logger.debug('DONE: All packages are imported')
 
         time.sleep(3)
-
         logger.debug('Remember to push everything on Github')
 
 
@@ -88,9 +78,8 @@ class DjangoHerokuDeploy():
         
         except:
             logger.debug('INFO: Please login to heroku')
-
-
         time.sleep(2)
+
 
     # creating a heroku domain-name
         domain_name = input('Choose the app name: ')
