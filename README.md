@@ -4,6 +4,9 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/ioi2908/djangoroku)
 
+[![Downloads](https://pepy.tech/badge/djangoroku)](https://pepy.tech/project/djangoroku)
+[![Downloads](https://pepy.tech/badge/djangoroku/month)](https://pepy.tech/project/djangoroku)
+[![Downloads](https://pepy.tech/badge/djangoroku/week)](https://pepy.tech/project/djangoroku)
 
 - [Djangoroku](https://github.com/maen08/djangoroku)  **By [@maen08](https://twitter.com/maentechie)**
 
