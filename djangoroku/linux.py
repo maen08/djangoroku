@@ -11,7 +11,9 @@ class DeployOnLinux():
 
     try:
         os.system(
-            'pip install gunicorn psycopg2-binary django-heroku dj-database-url')
+            'pip install python3-dev libpq-dev')
+        os.system(
+            'pip install gunicorn psycopg2 psycopg2-binary django-heroku dj-database-url')
         logger.debug('DONE: All packages are installed successfully')
 
     except FileExistsError:
